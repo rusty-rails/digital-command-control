@@ -1,0 +1,11 @@
+[package]
+name = "digital-command-control"
+version = "0.1.0"
+edition = "2021"
+authors = ["Christian <chriamue@gmail.com>"]
+description = "Digital Command Control (DCC) is a standard for a system to operate model railways digitally."
+repository = "https://github.com/rusty-rails/digital-command-control.git"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
