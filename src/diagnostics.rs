@@ -1,13 +1,13 @@
 // https://dcc-ex.com/reference/software/diagnostic-d-command.html#diagnostics-d-command
 use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Serialize, Deserialize, PartialEq)]
+#[derive(Debug, Serialize, Deserialize, PartialEq, Clone)]
 pub enum Other {
     #[serde(rename = "<D CABS>")]
     Cabs,
 }
 
-#[derive(Debug, Serialize, Deserialize, PartialEq)]
+#[derive(Debug, Serialize, Deserialize, PartialEq, Clone)]
 #[serde(untagged)]
 pub enum Diagnostics {
     Other(Other),

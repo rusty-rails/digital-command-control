@@ -1,7 +1,7 @@
 // https://dcc-ex.com/reference/software/command-summary.html#id1
 use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Serialize, Deserialize, PartialEq)]
+#[derive(Debug, Serialize, Deserialize, PartialEq, Clone)]
 pub enum PowerOff {
     #[serde(rename = "<0 MAIN>")]
     MAIN,
@@ -9,7 +9,7 @@ pub enum PowerOff {
     PROG,
 }
 
-#[derive(Debug, Serialize, Deserialize, PartialEq)]
+#[derive(Debug, Serialize, Deserialize, PartialEq, Clone)]
 pub enum PowerOn {
     #[serde(rename = "<1 MAIN>")]
     MAIN,
@@ -19,7 +19,7 @@ pub enum PowerOn {
     JOIN,
 }
 
-#[derive(Debug, Serialize, Deserialize, PartialEq)]
+#[derive(Debug, Serialize, Deserialize, PartialEq, Clone)]
 pub enum Other {
     #[serde(rename = "<c>")]
     Current,
@@ -29,7 +29,7 @@ pub enum Other {
     Reset,
 }
 
-#[derive(Debug, Serialize, Deserialize, PartialEq)]
+#[derive(Debug, Serialize, Deserialize, PartialEq, Clone)]
 #[serde(untagged)]
 pub enum PowerManagement {
     PowerOff(PowerOff),

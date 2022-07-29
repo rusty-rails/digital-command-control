@@ -3,7 +3,7 @@ use crate::diagnostics::Diagnostics;
 use crate::power_management::PowerManagement;
 use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Serialize, Deserialize, PartialEq)]
+#[derive(Debug, Serialize, Deserialize, PartialEq, Clone)]
 #[serde(untagged)]
 pub enum Command {
     PowerManagement(PowerManagement),
