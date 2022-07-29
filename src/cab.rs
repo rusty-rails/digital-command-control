@@ -87,7 +87,7 @@ where
     }
 }
 
-#[derive(Debug, Serialize, Deserialize, PartialEq)]
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 pub enum Other {
     #[serde(rename = "<!>")]
     Stop,
@@ -95,7 +95,7 @@ pub enum Other {
     Cabs,
 }
 
-#[derive(Debug, Serialize, Deserialize, PartialEq)]
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 #[serde(untagged)]
 pub enum Cab {
     Other(Other),
